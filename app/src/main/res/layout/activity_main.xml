@@ -9,15 +9,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bleard Rexhaj"></TextView>
+        android:text="Bleard Rexhaj"/>
 
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fehmi Citaku" />
-
+        android:text="Fehmi Citaku"
+        android:paddingLeft="5dp"/>
 
 
 </LinearLayout>
