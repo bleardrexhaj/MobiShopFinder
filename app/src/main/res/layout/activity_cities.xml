@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/choosecity"
+    android:orientation="vertical"
+
+    tools:context="com.sj.projekt.mobishopfinder.Cities">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="Zgjidh Qytetin"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:background="@color/yello"
+
+                android:gravity="center"
+
+
+                android:layout_gravity="center"/>
+
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Artanë"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Besianë"
+                android:layout_marginBottom="15dp"/>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Deçan"
+                android:layout_marginBottom="15dp"/>
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Ferizaj"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Fushë Kosovë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Gjakovë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Gjilan"/>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Klinë"/>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Malishevë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Mitrovicë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Pejë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Prishtinë"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Prizren"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Rahovec"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Skenderaj"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Shtime"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Therandë"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Viti"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Vushtrri"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
