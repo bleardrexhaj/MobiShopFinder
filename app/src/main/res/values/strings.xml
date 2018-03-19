@@ -1,3 +1,144 @@
 <resources>
     <string name="app_name">MobiShopFinder</string>
+
+
+    <string name="zgjidh_qytetin">Zgjidh Qytetin!</string>
+    <string name="top_10">Top 10</string>
+    <string name="low_high">Low-High Price</string>
+    <string name="become_reseller">Become a Reseller</string>
+
+    <string name="title_activity_artane">Artanë</string>
+    <string name="title_activity_besiane">Besianë</string>
+    <string name="title_activity_decan">Deçan</string>
+    <string name="title_activity_ferizaj">Ferizaj</string>
+    <string name="title_activity_fushe_kosove">Fushe Kosovë</string>
+    <string name="title_activity_gjakova">Gjakovë</string>
+    <string name="title_activity_gjilan">Gjilan</string>
+    <string name="title_activity_kline">Klinë</string>
+    <string name="title_activity_malisheve">Malishevë</string>
+    <string name="title_activity_mitrovice">Mitrovicë</string>
+    <string name="title_activity_peje">Pejë</string>
+    <string name="title_activity_prishtine">Prishtinë</string>
+    <string name="title_activity_prizren">Prizren</string>
+    <string name="title_activity_rahovec">Rahovec</string>
+    <string name="title_activity_skenderaj">Skenderaj</string>
+    <string name="title_activity_shtime">Shtime</string>
+    <string name="title_activity_therande">Therandë</string>
+    <string name="title_activity_viti">Viti</string>
+    <string name="title_activity_vushtrri">Vushtrri</string>
+
+    <string-array name="artane_mobileshops">
+        <item>MobileShop Besi</item>
+        <item>MobileShop Niti</item>
+        <item>MobileShop Beka</item>
+    </string-array>
+
+    <string-array name="besiane_mobileshops">
+        <item>MobileShop Lumi</item>
+        <item>MobileShop Apple</item>
+        <item>MobileShop Naki</item>
+    </string-array>
+
+    <string-array name="decan_mobileshops">
+        <item>MobileShop Decan1</item>
+        <item>MobileShop Decan2</item>
+        <item>MobileShop Decan3</item>
+    </string-array>
+
+    <string-array name="ferizaj_mobileshops">
+        <item>MobileShop Ferizaj1</item>
+        <item>MobileShop Ferizaj2</item>
+        <item>MobileShop Ferizaj3</item>
+    </string-array>
+
+    <string-array name="fushe_kosove_mobileshops">
+        <item>MobileShop F-Kosove1</item>
+        <item>MobileShop F-Kosove2</item>
+        <item>MobileShop F-Kosove3</item>
+    </string-array>
+
+    <string-array name="gjakova_mobileshops">
+        <item>MobileShop Gjakovë1</item>
+        <item>MobileShop Gjakovë2</item>
+        <item>MobileShop Gjakovë3</item>
+    </string-array>
+
+    <string-array name="gjilan_mobileshops">
+        <item>MobileShop Gjilan1</item>
+        <item>MobileShop Gjilan2</item>
+        <item>MobileShop Gjilan3</item>
+    </string-array>
+
+    <string-array name="kline_mobileshops">
+        <item>MobileShop Kline1</item>
+        <item>MobileShop Kline2</item>
+        <item>MobileShop Kline3</item>
+    </string-array>
+
+    <string-array name="malisheve_mobileshops">
+        <item>MobileShop Malisheve1</item>
+        <item>MobileShop Malisheve2</item>
+        <item>MobileShop Malisheve3</item>
+    </string-array>
+
+    <string-array name="mitrovice_mobileshops">
+        <item>MobileShop Mitrovice1</item>
+        <item>MobileShop Mitrovice2</item>
+        <item>MobileShop Mitrovice3</item>
+    </string-array>
+
+    <string-array name="peje_mobileshops">
+        <item>MobileShop Labi</item>
+        <item>MobileShop Naki</item>
+        <item>MobileShop AppleShop</item>
+    </string-array>
+
+    <string-array name="prishtine_mobileshops">
+        <item>MobileShop Fita</item>
+        <item>MobileShop Grosha</item>
+        <item>MobileShop Ardi</item>
+    </string-array>
+
+    <string-array name="prizren_mobileshops">
+        <item>MobileShop Prizren1</item>
+        <item>MobileShop Prizren2</item>
+        <item>MobileShop Prizren3</item>
+    </string-array>
+    
+    <string-array name="rahovec_mobileshops">
+        <item>MobileShop Rahovec1</item>
+        <item>MobileShop Rahovec2</item>
+        <item>MobileShop Rahovec3</item>
+    </string-array>
+
+    <string-array name="skenderaj_mobileshops">
+        <item>MobileShop Skenderaj1</item>
+        <item>MobileShop Skenderaj2</item>
+        <item>MobileShop Skenderaj3</item>
+    </string-array>
+
+    <string-array name="shtime_mobileshops">
+        <item>MobileShop Shtime1</item>
+        <item>MobileShop Shtime2</item>
+        <item>MobileShop Shtime3</item>
+    </string-array>
+
+    <string-array name="therande_mobileshops">
+        <item>MobileShop Therande1</item>
+        <item>MobileShop Therande2</item>
+        <item>MobileShop Therande3</item>
+    </string-array>
+
+    <string-array name="viti_mobileshops">
+        <item>MobileShop Viti1</item>
+        <item>MobileShop Viti2</item>
+        <item>MobileShop Viti3</item>
+    </string-array>
+
+    <string-array name="vushtrri_mobileshops">
+        <item>MobileShop Vushtrri1</item>
+        <item>MobileShop Vushtrri2</item>
+        <item>MobileShop Vushtrri3</item>
+    </string-array>
+
 </resources>

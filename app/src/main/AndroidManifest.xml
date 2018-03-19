@@ -14,17 +14,37 @@
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Cities"></activity>
-        <activity android:name=".becomereseller"></activity>
-        <activity android:name=".lowhigh"></activity>
-        <activity android:name=".topten"></activity>
-
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Cities" />
+        <activity android:name=".becomereseller" />
+        <activity android:name=".lowhigh" />
+        <activity android:name=".topten" />
+        <activity
+            android:name=".Qytetet.Artane"
+            android:label="@string/title_activity_artane"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Qytetet.Besiane" />
+        <activity android:name=".Qytetet.Decan" />
+        <activity android:name=".Qytetet.Ferizaj" />
+        <activity android:name=".Qytetet.Fushe_Kosove" />
+        <activity android:name=".Qytetet.Gjakove" />
+        <activity android:name=".Qytetet.Gjilan" />
+        <activity android:name=".Qytetet.Kline" />
+        <activity android:name=".Qytetet.Malisheve" />
+        <activity android:name=".Qytetet.Mitrovice" />
+        <activity android:name=".Qytetet.Peje" />
+        <activity android:name=".Qytetet.Prishtine" />
+        <activity android:name=".Qytetet.Prizren" />
+        <activity android:name=".Qytetet.Rahovec" />
+        <activity android:name=".Qytetet.Skenderaj" />
+        <activity android:name=".Qytetet.Shtime" />
+        <activity android:name=".Qytetet.Therande" />
+        <activity android:name=".Qytetet.Viti" />
+        <activity android:name=".Qytetet.Vushtrri"></activity>
     </application>
 
 </manifest>

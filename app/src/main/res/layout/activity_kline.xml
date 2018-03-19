@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/choosecity"
+    android:orientation="vertical"
+
+    tools:context="com.sj.projekt.mobishopfinder.Cities">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:text="@string/title_activity_kline"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:background="@color/yello"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="30sp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="60sp"
+        android:layout_marginEnd="60sp"
+        android:textAlignment="center">
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="70sp"
+            android:divider="@color/colorPrimaryDark"
+            android:entries="@array/kline_mobileshops"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -71,7 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Zgjidh Qytetin!"
+                    android:text="@string/zgjidh_qytetin"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Top 10"
+                    android:text="@string/top_10"
                     android:textStyle="bold" />
 
                 <View
@@ -158,7 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Low-High Price"
+                    android:text="@string/low_high"
                     android:textStyle="bold" />
 
                 <View
@@ -212,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Become a Reseller."
+                    android:text="@string/become_reseller"
                     android:textStyle="bold" />
 
 
