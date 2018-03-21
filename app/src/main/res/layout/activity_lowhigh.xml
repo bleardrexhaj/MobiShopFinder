@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sliderui"
+    android:orientation="vertical"
     tools:context="com.sj.projekt.mobishopfinder.lowhigh">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/cmimet" />
+
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Telefonat me te mire me qmimet me te lira !"/>
-</android.support.constraint.ConstraintLayout>
+        android:text="TOP CMIMET"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        android:id="@+id/textView" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Telefonat me te mire me qmimet me te lira !"
+        android:textColor="#FFF"/>
+</LinearLayout>

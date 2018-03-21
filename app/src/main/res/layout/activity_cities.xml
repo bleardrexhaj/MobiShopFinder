@@ -22,7 +22,7 @@
 
             <TextView
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:text="@string/zgjidh_qytetin"
                 android:textStyle="bold"
                 android:layout_marginTop="50dp"
@@ -165,6 +165,7 @@
                 android:layout_marginRight="20dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:background="@color/yello"
                 android:text="@string/title_activity_prishtine"
                 android:id="@+id/prishtine"/>
 

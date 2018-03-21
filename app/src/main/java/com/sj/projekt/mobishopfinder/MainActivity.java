@@ -9,7 +9,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller;
+    private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller, infoBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         topten = findViewById(R.id.topten);
         lowHighPrice = findViewById(R.id.lowHighPrice);
         becomeReseller = findViewById(R.id.becomeReseller);
+        infoBox = findViewById(R.id.infoBox);
 
 
         zgjidh_qytetin.setOnClickListener(this);
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lowHighPrice.setOnClickListener(this);
         becomeReseller.setOnClickListener(this);
 
+
+
+        infoBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,informationbox.class));
+            }
+        });
 
 
 

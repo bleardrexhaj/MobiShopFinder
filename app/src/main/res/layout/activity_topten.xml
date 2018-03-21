@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sliderui"
     tools:context="com.sj.projekt.mobishopfinder.topten">
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/kerkotel"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="TOP 10"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Top 10 SmartPhones so far"/>
-</android.support.constraint.ConstraintLayout>
+        android:layout_marginTop="20dp"
+        android:text="10 Smartphonet me cilesorë deri me tani !"
+        android:textColor="#FFF"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="SHIKO TOP 10 SMARTPHONE"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:background="#33cc55"
+        android:textColor="#FFF"
+        />
+</LinearLayout>
