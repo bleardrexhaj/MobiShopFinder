@@ -47,7 +47,8 @@
         <activity android:name=".Qytetet.Vushtrri" />
         <activity
             android:name=".informationbox"
-            android:theme="@style/AppTheme.popupTheme"></activity>
+            android:theme="@style/AppTheme.popupTheme" />
+        <activity android:name=".FeedBack"></activity>
     </application>
 
 </manifest>
