@@ -44,7 +44,10 @@
         <activity android:name=".Qytetet.Shtime" />
         <activity android:name=".Qytetet.Therande" />
         <activity android:name=".Qytetet.Viti" />
-        <activity android:name=".Qytetet.Vushtrri"></activity>
+        <activity android:name=".Qytetet.Vushtrri" />
+        <activity
+            android:name=".informationbox"
+            android:theme="@style/AppTheme.popupTheme"></activity>
     </application>
 
 </manifest>
