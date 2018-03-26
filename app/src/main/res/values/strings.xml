@@ -94,9 +94,9 @@
     </string-array>
 
     <string-array name="prishtine_mobileshops">
-        <item>MobileShop Fita</item>
-        <item>MobileShop Grosha</item>
-        <item>MobileShop Ardi</item>
+        <item>MobileShop Qendra</item>
+        <item>MobileShop Erlisi</item>
+        <item>MobileShop Toni</item>
     </string-array>
 
     <string-array name="prizren_mobileshops">
@@ -140,5 +140,6 @@
         <item>MobileShop Vushtrri2</item>
         <item>MobileShop Vushtrri3</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

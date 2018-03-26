@@ -1,20 +1,36 @@
 package com.sj.projekt.mobishopfinder;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller, infoBox;
+    SupportMapFragment mDummyMapInitializer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDummyMapInitializer = new SupportMapFragment();
+        mDummyMapInitializer.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap googleMap) {
+
+            }
+        });
 
         zgjidh_qytetin = findViewById(R.id.zgjidh_qytetin);
         topten = findViewById(R.id.topten);
