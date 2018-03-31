@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sj.projekt.mobishopfinder.Phones.Iphone8"
+    android:background="@color/lightgray2">
+
+
+
+    <ImageView
+        android:id="@+id/sg9"
+        android:layout_width="fill_parent"
+        android:layout_height="216dp"
+        android:scaleType="fitStart"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/iphone8" />
+
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/sg9"
+        android:text="@string/rank_iphone8"
+        android:textSize="12sp"
+
+        android:textColor="@color/gray"
+        />
+
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/rank"
+        android:text="@string/iphone8"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/name"
+        android:text="@string/price_iphone8"
+        android:textStyle="bold"
+        android:textColor="@color/green1"/>
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/price"
+        android:layout_marginTop="30dp"
+        android:background="@color/silver" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:text="DESCRIPTION"
+        android:textSize="12.2sp"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="15dp"
+        android:textSize="12.2sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="The Apple iPhone 8 is powered by hexa-core Apple A11 Bionic processor and it comes with 2GB of RAM. The phone packs 64GB of internal storage that cannot be expanded. As far as the cameras are concerned, the Apple iPhone 8 packs a 12-megapixel primary camera on the rear and a 7-megapixel front shooter for selfies.The Apple iPhone 8 runs iOS 11 and is powered by a 1821mAh non removable battery.
+OS	iOS 11, upgradable to iOS 11.2.5
+Chipset	Apple A11 Bionic
+CPU	Hexa-core (2x Monsoon + 4x Mistral)
+GPU	Apple GPU (three-core graphics)"
+        />
+
+
+
+</RelativeLayout>

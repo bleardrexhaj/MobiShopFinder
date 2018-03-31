@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sj.projekt.mobishopfinder.Phones.Google_pixel"
+    android:background="@color/lightgray2">
+
+
+
+
+    <ImageView
+        android:id="@+id/sg9"
+        android:layout_width="fill_parent"
+        android:layout_height="216dp"
+        android:scaleType="fitStart"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/google" />
+
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/sg9"
+        android:text="@string/rank_google"
+        android:textSize="12sp"
+
+        android:textColor="@color/gray"
+        />
+
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/rank"
+        android:text="@string/google"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/name"
+        android:text="@string/price_google"
+        android:textStyle="bold"
+        android:textColor="@color/green1"/>
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/price"
+        android:layout_marginTop="30dp"
+        android:background="@color/silver" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:text="DESCRIPTION"
+        android:textSize="12.2sp"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="15dp"
+        android:textSize="12.2sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="The Google Pixel 2 is powered by 1.9GHz octa-core Qualcomm Snapdragon 835 processor and it comes with 4GB of RAM. The phone packs 64GB of internal storage that cannot be expanded. As far as the cameras are concerned, the Google Pixel 2 packs a 12.2-megapixel primary camera on the rear and a 8-megapixel front shooter for selfies..
+Type	AMOLED capacitive touchscreen, 16M colors
+Size	5.0 inches, 68.9 cm2 (~67.9% screen-to-body ratio)
+Resolution	1080 x 1920 pixels, 16:9 ratio (~441 ppi density)
+Multitouch	Yes
+Protection	Corning Gorilla Glass 5."
+
+        />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

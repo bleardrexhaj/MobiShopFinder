@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sj.projekt.mobishopfinder.Phones.IphoneX"
+    android:background="@color/lightgray2">
+
+
+    <ImageView
+        android:id="@+id/iph10"
+        android:layout_width="fill_parent"
+        android:layout_height="216dp"
+        android:scaleType="fitStart"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/iphonex" />
+
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/iph10"
+        android:text="@string/rank_iphone"
+        android:textSize="12sp"
+
+        android:textColor="@color/gray"
+        />
+
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/rank"
+        android:text="@string/iphonex"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/name"
+        android:text="@string/price_iphone"
+        android:textStyle="bold"
+        android:textColor="@color/green1"/>
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/price"
+        android:layout_marginTop="25dp"
+        android:background="@color/silver" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="15dp"
+        android:text="DESCRIPTION"
+        android:textSize="12.2sp"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="15dp"
+        android:textSize="12.2sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="Indeed, Apple CEO Tim Cook called the new iPhone X “the biggest leap forward since the original iPhone,” and it’s easy to see why. The OLED display — an iPhone first — is called the Super Retina Display and measures 5.8 inches, with a resolution of 2,436 × 1,125 pixels. It features Dolby Vision and HDR10 for stunning high-contrast video playback, as well as TrueTone dynamic white-balance adjustment, a feature of the 10.5-inch iPad Pro and the new iPhone 8 models.
+ OS	iOS 11.1.1, upgradable to iOS 11.2.5
+ Chipset Apple A11 Bionic
+ CPU Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral)
+ GPU Apple GPU (three-core graphics)"
+        />
+
+
+
+</RelativeLayout>

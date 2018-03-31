@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sj.projekt.mobishopfinder.Phones.SamsungNote8"
+    android:background="@color/lightgray2">
+
+    <ImageView
+        android:id="@+id/sgn8"
+        android:layout_width="fill_parent"
+        android:layout_height="216dp"
+        android:scaleType="fitStart"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/snote8" />
+
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/sgn8"
+        android:text="@string/rank_sgn8"
+        android:textSize="12sp"
+
+        android:textColor="@color/gray"
+        />
+
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/rank"
+        android:text="@string/samsungnote8"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/name"
+        android:text="@string/price_sgn8"
+        android:textStyle="bold"
+        android:textColor="@color/green1"/>
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/price"
+        android:layout_marginTop="30dp"
+        android:background="@color/silver" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:text="DESCRIPTION"
+        android:textSize="12.2sp"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="15dp"
+        android:textSize="12.2sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="The Samsung Galaxy Note 8 is powered by 1.7GHz octa-core Samsung Exynos 9 Octa 8895 processor and it comes with 6GB of RAM. The phone packs 64GB of internal storage that can be expanded up to 256GB via a microSD card. As far as the cameras are concerned, the Samsung Galaxy Note 8 packs a 12-megapixel primary camera on the rear and a 8-megapixel front shooter for selfies.
+Type	Super AMOLED capacitive touchscreen, 16M colors
+Size	6.3 inches, 101.1 cm2 (~83.2% screen-to-body ratio)
+Resolution	1440 x 2960 pixels, 18.5:9 ratio (~521 ppi density):
+    Multitouch	Yes
+    Protection	Corning Gorilla Glass 5."
+       />
+
+
+
+
+
+
+
+
+</RelativeLayout>

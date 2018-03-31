@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/apps3"
+    android:orientation="vertical"
+    tools:context="com.sj.projekt.mobishopfinder.Topten_content">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/samsungs9"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="140dp"
+                android:background="#464646"
+                android:text="@string/samsungs9"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/iphonex"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/iphonex"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/samsungnote"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/samsungnote8"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/google"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/google"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/iphone8"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/iphone8"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/huawei"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/huawei"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/oneplus"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/oneplus"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/sony_xperia"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/xperia"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/lg_v"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/lg"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/blackberry"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:background="#424242"
+                android:text="@string/blackb"
+                android:textColor="@color/white_color"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

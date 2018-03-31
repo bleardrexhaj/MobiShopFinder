@@ -70,7 +70,14 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Topten_content" />
+        <activity android:name=".Phones.Samsungs9" />
+        <activity android:name=".Phones.IphoneX" />
+        <activity android:name=".Phones.SamsungNote8" />
+        <activity android:name=".Phones.Google_pixel" />
+        <activity android:name=".Phones.Iphone8" />
+        <activity android:name=".Phones.Temporary_phones"></activity>
     </application>
 
 </manifest>

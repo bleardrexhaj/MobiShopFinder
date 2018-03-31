@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sj.projekt.mobishopfinder.Phones.Samsungs9"
+    android:background="@color/lightgray2">
+
+
+    <ImageView
+        android:id="@+id/sg9"
+        android:layout_width="fill_parent"
+        android:layout_height="216dp"
+        android:scaleType="fitStart"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/gala" />
+
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/sg9"
+        android:text="@string/rank"
+        android:textSize="12sp"
+
+        android:textColor="@color/gray"
+        />
+
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/rank"
+        android:text="@string/samsungs9"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/name"
+        android:text="@string/price"
+        android:textStyle="bold"
+        android:textColor="@color/green1"/>
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/price"
+        android:layout_marginTop="30dp"
+        android:background="@color/silver" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:text="DESCRIPTION"
+        android:textSize="12.2sp"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="15dp"
+        android:textSize="12.2sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="The Samsung Galaxy S9 is a great phone, but one that hasn't really kicked on from the Galaxy S8, bringing a very similar design and screen to 2017's version. The improved biometrics were sorely needed, and the camera is a leap forward, but the amazing low light capabilities have resulted in sacrifices elsewhere. A top, top phone, but the S9 Plus outshines it.
+Card slot microSD, up to 400 GB (uses SIM 2 slot) - dual SIM model only
+Internal 64/128/256 GB, 4 GB RAM"
+        />
+
+
+
+
+
+
+</RelativeLayout>
