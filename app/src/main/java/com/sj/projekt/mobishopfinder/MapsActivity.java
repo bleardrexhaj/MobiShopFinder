@@ -9,6 +9,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -52,7 +53,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng MobileShop = new LatLng(longitude, latitude);
-        mMap.addMarker(new MarkerOptions().position(MobileShop).title(name));
+        MarkerOptions marker = new MarkerOptions()
+                .title(name)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.markerfinal))
+                .position(MobileShop);
+
+        mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MobileShop));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(MobileShop,20));
     }
