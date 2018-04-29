@@ -12,7 +12,7 @@ import java.util.List;
 public class DBHandler extends SQLiteOpenHelper {
 
     //Emri i databases
-    private static final String DATABASE_NAME = "MobileShop";
+    private static final String DATABASE_NAME = "MobileShop.db";
 
 
     //Emri i tabelave
