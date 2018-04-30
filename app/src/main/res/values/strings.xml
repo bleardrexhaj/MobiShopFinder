@@ -172,6 +172,12 @@
 
     <string name="price_iphone8">$ 650</string>
     <string name="rank_iphone8">#5 on 2018 ranking</string>
+    <string name="title_activity_tabbed">tabbed</string>
+    <string name="tab_text_1">Location</string>
+    <string name="tab_text_2">Phones</string>
+    <string name="tab_text_3">Information</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 
 </resources>

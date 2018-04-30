@@ -1,51 +1,58 @@
 package com.sj.projekt.mobishopfinder.Qytetet;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
-import com.sj.projekt.mobishopfinder.MapsActivity;
 import com.sj.projekt.mobishopfinder.R;
+import com.sj.projekt.mobishopfinder.tabbed;
 
-public class Prizren extends AppCompatActivity {
+public class Prizren extends AppCompatActivity implements View.OnClickListener {
     ListView list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Button prizren1, prizren2, prizren3;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prizren);
 
-        list = findViewById(R.id.lista);
 
-        list.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        String selected = list.getItemAtPosition(i).toString();
-                        double Latitude=0,Longitude=0;
+        prizren1 = findViewById(R.id.prizren1);
+        prizren2 = findViewById(R.id.prizren2);
+        prizren3 = findViewById(R.id.prizren3);
 
-                        String name = selected;
-                        if(selected.equals("MobileShop Prizren1")) {
-                            Latitude = 42.206266;
-                            Longitude = 20.725252;
-                        }else if(selected.equals("MobileShop Prizren2")){
-                            Latitude = 42.209958;
-                            Longitude = 20.737874;
-                        }else if(selected.equals("MobileShop Prizren3")){
-                            Latitude = 42.213476;
-                            Longitude = 20.731155;
-                        }
 
-                        if(name != "" || Longitude != 0 || Latitude != 0) {
-                            Intent intent = new Intent(Prizren.this, MapsActivity.class);
-                            intent.putExtra("emri", name);
-                            intent.putExtra("Latitude", Latitude);
-                            intent.putExtra("Longitude", Longitude);
-                            startActivity(intent);
-                        }
-                    }
-                });
+        prizren3.setOnClickListener(this);
+        prizren2.setOnClickListener(this);
+        prizren1.setOnClickListener(this);
+
+    }
+
+
+    public void onClick(View view) {
+        Intent i;
+
+        switch (view.getId()) {
+
+            case R.id.prizren1:
+                i = new Intent(this, tabbed.class);
+                startActivity(i);
+                break;
+            case R.id.prizren2:
+                i = new Intent(this, tabbed.class);
+                startActivity(i);
+                break;
+            case R.id.prizren3:
+                i = new Intent(this, tabbed.class);
+                startActivity(i);
+                break;
+
+
+        }
     }
 }
