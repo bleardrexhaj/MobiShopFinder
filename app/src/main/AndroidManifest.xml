@@ -78,6 +78,7 @@
         <activity android:name=".Phones.Google_pixel" />
         <activity android:name=".Phones.Iphone8" />
         <activity android:name=".Phones.Temporary_phones" />
+        <activity android:name=".Signin"></activity>
     </application>
 
 </manifest>
