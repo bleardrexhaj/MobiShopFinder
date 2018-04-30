@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.sj.projekt.mobishopfinder.MainActivity;
 import com.sj.projekt.mobishopfinder.R;
 import com.sj.projekt.mobishopfinder.tabbed;
 
@@ -53,7 +52,7 @@ public class Prizren extends AppCompatActivity implements View.OnClickListener {
             case R.id.prizren3:
                 i = new Intent(this, tabbed.class);
             case R.id.prizren4:
-                i = new Intent(this, MainActivity.class);
+                i = new Intent(this, tabbed.class);
                 startActivity(i);
                 break;
 
