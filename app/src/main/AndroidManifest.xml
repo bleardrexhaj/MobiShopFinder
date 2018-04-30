@@ -52,6 +52,7 @@
         <activity android:name=".Qytetet.Therande" />
         <activity android:name=".Qytetet.Viti" />
         <activity android:name=".Qytetet.Vushtrri" />
+        <activity android:name=".Signin" />
         <activity
             android:name=".informationbox"
             android:theme="@style/AppTheme.popupTheme" />
