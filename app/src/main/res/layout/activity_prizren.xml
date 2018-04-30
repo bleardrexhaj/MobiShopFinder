@@ -50,6 +50,12 @@
             android:text="MobiShop Prizren3"
             android:id="@+id/prizren3"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prizren4"
+            android:text="MobiSHOp prizren 4"/>
+
 
     </LinearLayout>
 </LinearLayout>
