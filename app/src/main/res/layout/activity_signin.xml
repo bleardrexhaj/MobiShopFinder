@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/usrLoginf" />
+        android:src="@drawable/usrLogin" />
 
 
     <ScrollView
@@ -142,6 +142,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp"
                 android:id="@+id/register_button"
+
+
 
                 />
 
