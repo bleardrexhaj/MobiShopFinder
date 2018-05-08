@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/usrLogin" />
+        android:src="@drawable/usrlogin" />
 
 
     <ScrollView
