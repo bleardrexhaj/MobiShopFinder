@@ -13,8 +13,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller, infoBox;
+    private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller, infoBox,signin;
     SupportMapFragment mDummyMapInitializer;
+
+    DBHandler database = DBHandler.getInstance(this);
 
 
     @Override
@@ -34,23 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lowHighPrice = findViewById(R.id.lowHighPrice);
         becomeReseller = findViewById(R.id.becomeReseller);
         infoBox = findViewById(R.id.infoBox);
-
+        signin = findViewById(R.id.user_login);
 
         zgjidh_qytetin.setOnClickListener(this);
         topten.setOnClickListener(this);
         lowHighPrice.setOnClickListener(this);
         becomeReseller.setOnClickListener(this);
-
-
-
-
-
-        infoBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,informationbox.class));
-            }
-        });
+        signin.setOnClickListener(this);
+        infoBox.setOnClickListener(this);
 
 
 
@@ -59,13 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         Intent i;
-
         switch (view.getId()) {
 
+            case R.id.infoBox : i = new Intent(MainActivity.this,informationbox.class); startActivity(i); break;
             case R.id.zgjidh_qytetin : i = new Intent(this, Cities.class);startActivity(i); break;
             case R.id.topten : i = new Intent(this, topten.class);startActivity(i); break;
             case R.id.lowHighPrice : i = new Intent(this, lowhigh.class);startActivity(i); break;
             case R.id.becomeReseller : i = new Intent(this, becomereseller.class);startActivity(i); break;
+            case R.id.user_login : i = new Intent(this,Signin.class);startActivity(i); break;
 
             default: break;
 

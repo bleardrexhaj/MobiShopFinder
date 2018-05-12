@@ -1,14 +1,20 @@
 package com.sj.projekt.mobishopfinder.Qytetet;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.sj.projekt.mobishopfinder.DBHandler;
 import com.sj.projekt.mobishopfinder.MapsActivity;
 import com.sj.projekt.mobishopfinder.R;
+
+import java.util.ArrayList;
 
 public class Peje extends AppCompatActivity {
     ListView list;
@@ -17,35 +23,50 @@ public class Peje extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peje);
 
+        final ArrayAdapter<String> items = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item);
+
+        final DBHandler db = DBHandler.getInstance(this);
+
+        //Singelton ose activity
+        Cursor data = db.getMobileShopData();
+        if (data.moveToFirst()) {
+            for (int i = 0; i < data.getCount(); i++) {
+
+                items.add(data.getString(1));
+                Log.d("REZULT", "MSGG------------------------------------------- " + data.getString(1));
+                data.moveToNext();
+            }
+        }
+
+
         list = findViewById(R.id.lista);
 
+        list.setAdapter(items);
         list.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
                         String selected = list.getItemAtPosition(i).toString();
                         double Latitude=0,Longitude=0;
 
-                        String name = selected;
-                        if(selected.equals("MobileShop Labi")) {
-                            Latitude = 42.662150;
-                            Longitude = 20.296829;
-                        }else if(selected.equals("MobileShop Naki")){
-                            Latitude = 42.662127;
-                            Longitude = 20.296616;
-                        }else if(selected.equals("MobileShop AppleShop")){
-                            Latitude = 42.662819;
-                            Longitude = 20.297199;
-                        }
+                        Cursor rez = db.getMobileshopLocation(selected);
+                        rez.moveToFirst();
+                        Latitude = Double.parseDouble(rez.getString(0));
+                        Longitude = Double.parseDouble(rez.getString(1));
 
-                        if(name != "" || Longitude != 0 || Latitude != 0) {
+                        if(selected != "" || Longitude != 0 || Latitude != 0) {
                             Intent intent = new Intent(Peje.this, MapsActivity.class);
-                            intent.putExtra("emri", name);
+                            intent.putExtra("emri", selected);
                             intent.putExtra("Latitude", Latitude);
                             intent.putExtra("Longitude", Longitude);
+                            System.out.println(Latitude+"--------------------------"+Longitude);
                             startActivity(intent);
                         }
                     }
                 });
     }
+
+
 }

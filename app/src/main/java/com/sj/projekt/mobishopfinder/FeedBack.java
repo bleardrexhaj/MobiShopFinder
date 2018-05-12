@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.util.List;
@@ -40,11 +42,15 @@ public class FeedBack extends AppCompatActivity {
         alertDialogBuilderUserInput
                 .setCancelable(false)
                 .setPositiveButton("Send",new DialogInterface.OnClickListener(){
+
+
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                             String kritika_result = userInputDialogEditText.getText().toString();
                             String emri_result = emri.getText().toString();
                             String email_result = email.getText().toString();
+
+                            //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
                             if (!kritika_result.equals("") && !emri_result.equals("") && !email_result.equals("")) {
                                 Intent intent = new Intent(Intent.ACTION_SEND);
@@ -58,7 +64,9 @@ public class FeedBack extends AppCompatActivity {
                                         PackageManager.MATCH_DEFAULT_ONLY);
                                 boolean isIntentSafe = activities.size() > 0;
                                 if(isIntentSafe){
+
                                     c.startActivity(Intent.createChooser(intent, "Send Email"));
+
                                 }else
                                 {
                                     Toast.makeText(c,"Nuk ka default program per egzekutim",Toast.LENGTH_LONG).show();

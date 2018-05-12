@@ -41,7 +41,7 @@
             android:focusable="true"
             android:paddingStart="70sp"
             android:divider="@color/colorPrimaryDark"
-            android:entries="@array/peje_mobileshops"
+
             android:gravity="center"
             />
 
