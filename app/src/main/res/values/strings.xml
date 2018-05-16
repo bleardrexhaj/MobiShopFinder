@@ -27,6 +27,29 @@
     <string name="title_activity_viti">Viti</string>
     <string name="title_activity_vushtrri">Vushtrri</string>
 
+    <string-array name="cities">
+        <item>Zgjedh Qytetin</item>
+        <item>Artane</item>
+        <item>Besiane</item>
+        <item>Deçan</item>
+        <item>Ferizaj</item>
+        <item>Fushe_Kosove</item>
+        <item>Gjakove</item>
+        <item>Gjilan</item>
+        <item>Kline</item>
+        <item>Malisheve</item>
+        <item>Mitrovice</item>
+        <item>Peje</item>
+        <item>Prishtine</item>
+        <item>Prizren</item>
+        <item>Rahovec</item>
+        <item>Skenderaj</item>
+        <item>Shtime</item>
+        <item>Therande</item>
+        <item>Viti</item>
+        <item>Vushtrri</item>
+    </string-array>
+
     <string-array name="artane_mobileshops">
         <item>MobileShop Besi</item>
         <item>MobileShop Niti</item>

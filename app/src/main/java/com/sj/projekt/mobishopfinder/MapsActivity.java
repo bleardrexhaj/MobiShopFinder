@@ -15,6 +15,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -45,7 +46,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
+
         mapFragment.getMapAsync(this);
+
+
 
 
     }
@@ -64,13 +69,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void setMyLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         LocationManager locationManager = (LocationManager)
@@ -98,7 +96,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         boolean b = getIntent.getBooleanExtra("MerrLokacionin",false);
         if (b) {
-            // TODO: CHECK FOR INTERNET CONNECTION
+            // TODO: CHECK FOR INTERNET CONNECTION --> BLEARD
             //setMyLocation();
             mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
@@ -141,8 +139,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.addMarker(marker);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(MobileShop));
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(MobileShop, 20));
+
+
+
+
+
         }
     }
 
-
+    public GoogleMap getMap() {
+        return mMap;
+    }
 }

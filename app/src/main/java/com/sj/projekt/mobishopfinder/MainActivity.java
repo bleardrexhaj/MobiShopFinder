@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private CardView zgjidh_qytetin, topten, lowHighPrice, becomeReseller, infoBox,signin;
-    SupportMapFragment mDummyMapInitializer;
+
 
     DBHandler database = DBHandler.getInstance(this);
 
@@ -23,13 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mDummyMapInitializer = new SupportMapFragment();
-        mDummyMapInitializer.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) {
 
-            }
-        });
 
         zgjidh_qytetin = findViewById(R.id.zgjidh_qytetin);
         topten = findViewById(R.id.topten);

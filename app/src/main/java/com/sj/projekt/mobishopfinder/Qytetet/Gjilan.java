@@ -1,14 +1,18 @@
 package com.sj.projekt.mobishopfinder.Qytetet;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.sj.projekt.mobishopfinder.DBHandler;
 import com.sj.projekt.mobishopfinder.MapsActivity;
 import com.sj.projekt.mobishopfinder.R;
+import com.sj.projekt.mobishopfinder.tabbed;
 
 public class Gjilan extends AppCompatActivity {
     ListView list;
@@ -17,32 +21,47 @@ public class Gjilan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gjilan);
 
+        //adapter
+        final ArrayAdapter<String> items = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1);
+        //db
+        final DBHandler db = DBHandler.getInstance(this);
+
+
+        Cursor data = db.getMobileShopData();
+        if (data.moveToFirst()) {
+            for (int i = 0; i < data.getCount(); i++) {
+                if(data.getString(2).equals(getClass().getSimpleName())) {
+                    items.add(data.getString(1));
+                }
+                data.moveToNext();
+            }
+        }
+
+
         list = findViewById(R.id.lista);
 
+        list.setAdapter(items);
         list.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
                         String selected = list.getItemAtPosition(i).toString();
                         double Latitude=0,Longitude=0;
 
-                        String name = selected;
-                        if(selected.equals("MobileShop Gjilan1")) {
-                            Latitude = 42.466256;
-                            Longitude = 21.468965;
-                        }else if(selected.equals("MobileShop Gjilan2")){
-                            Latitude = 42.463126;
-                            Longitude = 21.470332;
-                        }else if(selected.equals("MobileShop Gjilan3")){
-                            Latitude = 42.464768;
-                            Longitude = 21.470779;
-                        }
+                        Cursor rez = db.getMobileshopLocation(selected);
+                        rez.moveToFirst();
+                        Latitude = Double.parseDouble(rez.getString(0));
+                        Longitude = Double.parseDouble(rez.getString(1));
 
-                        if(name != "" || Longitude != 0 || Latitude != 0) {
-                            Intent intent = new Intent(Gjilan.this, MapsActivity.class);
-                            intent.putExtra("emri", name);
+                        if(selected != "" || Longitude != 0 || Latitude != 0) {
+
+                            Intent intent = new Intent(Gjilan.this, tabbed.class);
+                            intent.putExtra("Emri", selected);
                             intent.putExtra("Latitude", Latitude);
                             intent.putExtra("Longitude", Longitude);
+                            System.out.println(Latitude+"--------------------------"+Longitude);
                             startActivity(intent);
                         }
                     }

@@ -1,62 +1,75 @@
 package com.sj.projekt.mobishopfinder.Qytetet;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.sj.projekt.mobishopfinder.DBHandler;
 import com.sj.projekt.mobishopfinder.R;
 import com.sj.projekt.mobishopfinder.tabbed;
 
-public class Prizren extends AppCompatActivity implements View.OnClickListener {
+public class Prizren extends AppCompatActivity  {
     ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Button prizren1, prizren2, prizren3, prizren4;
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prizren);
 
-
-        prizren1 = findViewById(R.id.prizren1);
-        prizren2 = findViewById(R.id.prizren2);
-        prizren3 = findViewById(R.id.prizren3);
-        prizren4 = findViewById(R.id.prizren4);
-
-
-        prizren3.setOnClickListener(this);
-        prizren2.setOnClickListener(this);
-        prizren1.setOnClickListener(this);
-        prizren4.setOnClickListener(this);
-
-    }
+        //adapter
+        final ArrayAdapter<String> items = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1);
+        //db
+        final DBHandler db = DBHandler.getInstance(this);
 
 
-    public void onClick(View view) {
-        Intent i;
-
-        switch (view.getId()) {
-
-            case R.id.prizren1:
-                i = new Intent(this, tabbed.class);
-                startActivity(i);
-                break;
-            case R.id.prizren2:
-                i = new Intent(this, tabbed.class);
-                startActivity(i);
-                break;
-            case R.id.prizren3:
-                i = new Intent(this, tabbed.class);
-            case R.id.prizren4:
-                i = new Intent(this, tabbed.class);
-                startActivity(i);
-                break;
-
-
+        Cursor data = db.getMobileShopData();
+        if (data.moveToFirst()) {
+            for (int i = 0; i < data.getCount(); i++) {
+                if(data.getString(2).equals(getClass().getSimpleName())) {
+                    items.add(data.getString(1));
+                }
+                data.moveToNext();
+            }
         }
+
+
+        list = findViewById(R.id.lista);
+
+        list.setAdapter(items);
+        list.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+                        String selected = list.getItemAtPosition(i).toString();
+                        double Latitude=0,Longitude=0;
+
+                        Cursor rez = db.getMobileshopLocation(selected);
+                        rez.moveToFirst();
+                        Latitude = Double.parseDouble(rez.getString(0));
+                        Longitude = Double.parseDouble(rez.getString(1));
+
+                        if(selected != "" || Longitude != 0 || Latitude != 0) {
+
+                            Intent intent = new Intent(Prizren.this, tabbed.class);
+                            intent.putExtra("Emri", selected);
+                            intent.putExtra("Latitude", Latitude);
+                            intent.putExtra("Longitude", Longitude);
+                            System.out.println(Latitude+"--------------------------"+Longitude);
+                            startActivity(intent);
+                        }
+                    }
+                });
+
     }
+
+
+
 }

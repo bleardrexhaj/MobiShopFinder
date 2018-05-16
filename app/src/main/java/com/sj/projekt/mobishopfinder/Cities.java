@@ -91,7 +91,7 @@ public class Cities extends AppCompatActivity implements View.OnClickListener {
             case R.id.kline : i = new Intent(this, Kline.class);startActivity(i); break;
             case R.id.malisheve : i = new Intent(this, Malisheve.class);startActivity(i); break;
             case R.id.mitrovice : i = new Intent(this, Mitrovice.class);startActivity(i); break;
-            case R.id.peje : i = new Intent(this, Peje.class);startActivity(i); break;
+            case R.id.peje : i = new Intent(this, Peje.class).putExtra("Qyteti","Peje");startActivity(i); break;
             case R.id.prishtine : i = new Intent(this, Prishtine.class);startActivity(i); break;
             case R.id.prizren : i = new Intent(this, Prizren.class);startActivity(i); break;
             case R.id.rahovec : i = new Intent(this, Rahovec.class);startActivity(i); break;

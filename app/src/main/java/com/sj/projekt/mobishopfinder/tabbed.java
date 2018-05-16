@@ -1,5 +1,6 @@
 package com.sj.projekt.mobishopfinder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,19 +17,11 @@ import android.view.View;
 
 public class tabbed extends AppCompatActivity {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+    private String Emri;
+    private double Latitude,Longitude;
+
     private ViewPager mViewPager;
 
     @Override
@@ -38,6 +31,7 @@ public class tabbed extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -60,6 +54,10 @@ public class tabbed extends AppCompatActivity {
             }
         });
 
+        Intent getIntent = getIntent();
+        Emri = getIntent.getStringExtra("Emri");
+        Latitude = getIntent.getDoubleExtra("Latitude",0);
+        Longitude = getIntent.getDoubleExtra("Longitude",0);
     }
 
 
@@ -75,6 +73,7 @@ public class tabbed extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -86,10 +85,6 @@ public class tabbed extends AppCompatActivity {
     }
 
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -100,8 +95,16 @@ public class tabbed extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1Location tab1 = new Tab1Location();
-                    return tab1;
+                     Tab1Location tab1 = new  Tab1Location();
+                     Bundle args = new Bundle();
+                     Intent getIntent = getIntent();
+
+                     args.putString("Emri",Emri);
+                     args.putDouble("Latitude",Latitude);
+                     args.putDouble("Longitude",Longitude);
+
+                     tab1.setArguments(args);
+                     return tab1;
                 case 1:
                     Tab2Phones tab2 = new Tab2Phones();
                     return tab2;
@@ -115,7 +118,7 @@ public class tabbed extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+
             return 3;
         }
     }

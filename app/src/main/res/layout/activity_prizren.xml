@@ -33,29 +33,17 @@
         android:layout_marginStart="60sp"
         android:layout_marginEnd="60sp"
         android:textAlignment="center">
-
-        <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MobiShop Prizren1"
-            android:id="@+id/prizren1"/>
-        <Button
+        <ListView
+            android:id="@+id/lista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MobiShop Prizren2"
-            android:id="@+id/prizren2"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MobiShop Prizren3"
-            android:id="@+id/prizren3"/>
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="70sp"
+            android:divider="@color/colorPrimaryDark"
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/prizren4"
-            android:text="MobiSHOp prizren 4"/>
-
+            android:gravity="center"
+            />
 
     </LinearLayout>
 </LinearLayout>

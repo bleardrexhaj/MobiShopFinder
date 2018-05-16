@@ -13,27 +13,29 @@ import android.widget.ListView;
 import com.sj.projekt.mobishopfinder.DBHandler;
 import com.sj.projekt.mobishopfinder.MapsActivity;
 import com.sj.projekt.mobishopfinder.R;
+import com.sj.projekt.mobishopfinder.tabbed;
 
-import java.util.ArrayList;
 
 public class Peje extends AppCompatActivity {
     ListView list;
+    private static int REQ_CODE = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peje);
 
-        final ArrayAdapter<String> items = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item);
-
+        //adapter
+        final ArrayAdapter<String> items = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1);
+        //db
         final DBHandler db = DBHandler.getInstance(this);
 
-        //Singelton ose activity
+
         Cursor data = db.getMobileShopData();
         if (data.moveToFirst()) {
             for (int i = 0; i < data.getCount(); i++) {
-
-                items.add(data.getString(1));
-                Log.d("REZULT", "MSGG------------------------------------------- " + data.getString(1));
+                if(data.getString(2).equals(getClass().getSimpleName())) {
+                    items.add(data.getString(1));
+                }
                 data.moveToNext();
             }
         }
@@ -57,8 +59,9 @@ public class Peje extends AppCompatActivity {
                         Longitude = Double.parseDouble(rez.getString(1));
 
                         if(selected != "" || Longitude != 0 || Latitude != 0) {
-                            Intent intent = new Intent(Peje.this, MapsActivity.class);
-                            intent.putExtra("emri", selected);
+
+                            Intent intent = new Intent(Peje.this, tabbed.class);
+                            intent.putExtra("Emri", selected);
                             intent.putExtra("Latitude", Latitude);
                             intent.putExtra("Longitude", Longitude);
                             System.out.println(Latitude+"--------------------------"+Longitude);
@@ -68,5 +71,9 @@ public class Peje extends AppCompatActivity {
                 });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+    }
 }
