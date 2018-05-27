@@ -32,209 +32,31 @@
                 />
 
 
-            <Button
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="match_parent"
+            <Spinner
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="#dedede"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:id="@+id/spinner1"/>
+
+
+            <TextView
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="40dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Artanë"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/artane"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:id="@+id/besiane"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_besiane"
-                android:layout_marginBottom="15dp"/>
+                android:text="Kerko Mobileshop-ate neper secilin qytet te Kosoves
+Duke pare gjithashtu lokacionin, telefonat, dhe te dhenat e tyre !"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:paddingVertical="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:background="#33cc55"/>
 
 
 
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_decan"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/decan"/>
-
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_ferizaj"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/ferizaj"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_fushe_kosove"
-                android:id="@+id/fushekosove"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_gjakova"
-                android:id="@+id/gjakove"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_gjilan"
-                android:id="@+id/gjilan"/>
-
-
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_kline"
-                android:id="@+id/kline"/>
-
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="Malisheve"
-                android:id="@+id/malisheve"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="Mitrovicë"
-                android:id="@+id/mitrovice"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="Pejë"
-                android:id="@+id/peje"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:background="@color/yello"
-                android:text="@string/title_activity_prishtine"
-                android:id="@+id/prishtine"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_prizren"
-                android:id="@+id/prizren"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_rahovec"
-                android:id="@+id/rahovec"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_skenderaj"
-                android:id="@+id/skenderaj"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_shtime"
-                android:id="@+id/shtime"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="Therandë"
-                android:id="@+id/therande"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_viti"
-                android:id="@+id/viti"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:text="@string/title_activity_vushtrri"
-                android:id="@+id/vushtrri"/>
 
 
 

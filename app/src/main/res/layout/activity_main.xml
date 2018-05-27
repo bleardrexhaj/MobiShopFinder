@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     android:orientation="vertical"
     android:padding="10dp"
     android:background="@drawable/mainactivity"
     android:gravity="center"
     android:id="@+id/ll">
+
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
