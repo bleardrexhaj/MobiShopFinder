@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.util.List;
@@ -46,11 +47,15 @@ public class FeedBack extends AppCompatActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        //TODO FIX A BUG HERE !!!
+                           InputMethodManager imm = (InputMethodManager)
+                                getSystemService(INPUT_METHOD_SERVICE);
+                           imm.hideSoftInputFromWindow(userInputDialogEditText.getWindowToken(),0);
                             String kritika_result = userInputDialogEditText.getText().toString();
                             String emri_result = emri.getText().toString();
                             String email_result = email.getText().toString();
 
-                            //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
 
                             if (!kritika_result.equals("") && !emri_result.equals("") && !email_result.equals("")) {
                                 Intent intent = new Intent(Intent.ACTION_SEND);
