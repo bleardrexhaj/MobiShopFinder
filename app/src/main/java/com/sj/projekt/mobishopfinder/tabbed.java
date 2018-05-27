@@ -1,9 +1,9 @@
 package com.sj.projekt.mobishopfinder;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +23,8 @@ public class tabbed extends AppCompatActivity {
     private double Latitude,Longitude;
 
     private ViewPager mViewPager;
+
+    public String nrTel = "049271704";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +51,13 @@ public class tabbed extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + nrTel ));
+                startActivity(intent);
             }
         });
+
+
 
         Intent getIntent = getIntent();
         Emri = getIntent.getStringExtra("Emri");
@@ -107,6 +112,7 @@ public class tabbed extends AppCompatActivity {
                      return tab1;
                 case 1:
                     Tab2Phones tab2 = new Tab2Phones();
+
                     return tab2;
                 case 2:
                     Tab3Information tab3 = new Tab3Information();
