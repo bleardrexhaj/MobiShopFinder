@@ -62,7 +62,8 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String MOBILESHOP_NAME = "name";
     private static final String MOBILESHOP_OWNER = "user_id";
     private static final String MOBILESHOP_QYTETI = "qyteti";
-    private static final String MOBILESHOP_CONTACT = "email";
+    private static final String MOBILESHOP_CONTACT_EMAIL = "email";
+    private static final String MOBILESHOP_CONTACT_PHONE = "phone";
 
 
     //Komanda e krijimit te tabeles Lokacioni
@@ -97,8 +98,9 @@ public class DBHandler extends SQLiteOpenHelper {
             MOBILESHOP_ADDRESS + " INTEGER NOT NULL, " +
             MOBILESHOP_NAME + " TEXT NOT NULL, " +
             MOBILESHOP_QYTETI +" TEXT NOT NULL, " +
-            MOBILESHOP_CONTACT + " TEXT NOT NULL, "+
-            MOBILESHOP_OWNER + " INTEGER NOT NULL, " +
+            MOBILESHOP_CONTACT_EMAIL + " TEXT NOT NULL, "+
+            MOBILESHOP_CONTACT_PHONE + " INTEGER NOT NULL, "+
+            MOBILESHOP_OWNER + " VARCHAR(20) NOT NULL, " +
             " FOREIGN KEY (" + MOBILESHOP_OWNER + ") REFERENCES " + TABLE_USERS + "(" + USERS_ID + "), " +
             " FOREIGN KEY (" + MOBILESHOP_ADDRESS + ") REFERENCES " + TABLE_LOCATION + "(" + LOCATION_ID + "));";
 
@@ -148,15 +150,16 @@ public class DBHandler extends SQLiteOpenHelper {
         DB.insert(TABLE_LOCATION, null, cv);
     }
 
-    public void insertIntoMobileShop(int location_id,String emri,String qyteti,String email,int ownerid) {
+    public void insertIntoMobileShop(int location_id,String emri,String qyteti,String email,int ownerid,String phone) {
         SQLiteDatabase DB = this.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
         cv.put(MOBILESHOP_ADDRESS, location_id);
         cv.put(MOBILESHOP_NAME, emri);
         cv.put(MOBILESHOP_QYTETI, qyteti);
-        cv.put(MOBILESHOP_CONTACT, email);
+        cv.put(MOBILESHOP_CONTACT_EMAIL, email);
         cv.put(MOBILESHOP_OWNER,ownerid);
+        cv.put(MOBILESHOP_CONTACT_PHONE,phone);
 
         DB.insert(TABLE_MOBILESHOP, null, cv);
     }
@@ -196,7 +199,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     public Cursor getMobileShopData() {
-        Cursor cursor = this.getWritableDatabase().query(TABLE_MOBILESHOP, new String[]{MOBILESHOP_ID, MOBILESHOP_NAME, MOBILESHOP_QYTETI, MOBILESHOP_CONTACT,MOBILESHOP_ADDRESS}, null, null, null, null, null);
+        Cursor cursor = this.getWritableDatabase().query(TABLE_MOBILESHOP, new String[]{MOBILESHOP_ID, MOBILESHOP_NAME, MOBILESHOP_QYTETI, MOBILESHOP_CONTACT_EMAIL,MOBILESHOP_ADDRESS}, null, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
         }

@@ -8,10 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.sj.projekt.mobishopfinder.DBHandler;
-import com.sj.projekt.mobishopfinder.MapsActivity;
 import com.sj.projekt.mobishopfinder.R;
 import com.sj.projekt.mobishopfinder.tabbed;
 

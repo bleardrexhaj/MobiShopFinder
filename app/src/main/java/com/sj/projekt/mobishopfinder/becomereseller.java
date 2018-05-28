@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class becomereseller extends AppCompatActivity  implements View.OnClickListener{
 
     private TextView login_text;
-    private EditText user_name,user_surname,shop_name,shop_email,user_password,user_confirm_password;
+    private EditText user_name,user_surname,shop_name,shop_email,user_password,user_confirm_password,shop_phone_number;
     private Spinner shop_city;
     private Button register_button,shop_location;
     private double latitude,longitude;
@@ -53,6 +53,7 @@ public class becomereseller extends AppCompatActivity  implements View.OnClickLi
         shop_email = findViewById(R.id.shop_email);
         user_password = findViewById(R.id.password);
         user_confirm_password = findViewById(R.id.confirm_password);
+        shop_phone_number = findViewById(R.id.shop_phone);
 
         getWindow().setBackgroundDrawableResource(R.drawable.iph);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); //mos mu hap keyboardi(automatic)
@@ -87,7 +88,7 @@ public class becomereseller extends AppCompatActivity  implements View.OnClickLi
 
             case R.id.register_button :
 
-                if(!user_name.getText().toString().equals("") && !user_surname.getText().toString().equals("") && !user_password.getText().toString().equals("")&& !user_confirm_password.getText().toString().equals("")&& !shop_email.getText().toString().equals("")&& !shop_city.getSelectedItem().toString().equals("")&& !shop_name.getText().toString().equals("")&& !shop_location.getText().toString().equals("")) {
+                if(!user_name.getText().toString().equals("") && !user_surname.getText().toString().equals("") && !user_password.getText().toString().equals("")&& !user_confirm_password.getText().toString().equals("")&& !shop_email.getText().toString().equals("")&& !shop_city.getSelectedItem().toString().equals("")&& !shop_name.getText().toString().equals("")&& !shop_location.getText().toString().equals("") && !shop_phone_number.getText().toString().equals("")) {
                     DBHandler db = DBHandler.getInstance(this);
                     String emri = user_name.getText().toString();
                     String mbiemri = user_surname.getText().toString();
@@ -96,6 +97,7 @@ public class becomereseller extends AppCompatActivity  implements View.OnClickLi
                     String emri_mobileshopit = shop_name.getText().toString();
                     String qyteti_mobileshopit = shop_city.getSelectedItem().toString();
                     String emaili_mobileshopit = shop_email.getText().toString();
+                    String numri_mobileshopit = shop_phone_number.getText().toString();
 
                     if(paswordi.equals(konfirm_pasword)) {
                         boolean vazhdo = false;
@@ -131,7 +133,7 @@ public class becomereseller extends AppCompatActivity  implements View.OnClickLi
                                 int locationid = Integer.parseInt(getLocData1.getString(0));
                                 int userid = Integer.parseInt(getUsrData1.getString(0));
 
-                                db.insertIntoMobileShop(locationid, emri_mobileshopit, qyteti_mobileshopit, emaili_mobileshopit, userid);
+                                db.insertIntoMobileShop(locationid, emri_mobileshopit, qyteti_mobileshopit, emaili_mobileshopit, userid,numri_mobileshopit);
                                 db.close();
                                 Toast.makeText(this, "JENI REGJISTRUAR ME SUKSESS!!!", Toast.LENGTH_LONG).show();
                                 finish();
