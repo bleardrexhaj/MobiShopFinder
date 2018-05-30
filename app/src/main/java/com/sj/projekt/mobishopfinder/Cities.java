@@ -1,6 +1,7 @@
 package com.sj.projekt.mobishopfinder;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sj.projekt.mobishopfinder.Qytetet.Artane;
 import com.sj.projekt.mobishopfinder.Qytetet.Besiane;
@@ -31,13 +33,12 @@ import com.sj.projekt.mobishopfinder.Qytetet.Vushtrri;
 
 public class Cities extends AppCompatActivity implements View.OnClickListener {
     TextView artane,besiane,decan,ferizaj,fushekosove,gjakove,gjilan,kline,malisheve,mitrovice,peje,prishtine,prizren,rahovec,skenderaj,shtime,therand,viti,vushtrri;
+    private static DBHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cities);
-
-
-        String selection;
+        db = DBHandler.getInstance(getApplicationContext());
 
 
         final Spinner mySpinner = findViewById(R.id.spinner1);
@@ -55,80 +56,404 @@ public class Cities extends AppCompatActivity implements View.OnClickListener {
                 final Intent intent;
                 if(selection.equals("Artane"))
                 {
-                    intent = new Intent(Cities.this, Artane.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Artane.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Besiane")) {
-                    intent = new Intent(Cities.this, Besiane.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Besiane.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
+
                 }
                 else if(selection.equals("Decan")) {
-                    intent = new Intent(Cities.this, Decan.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Decan.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Ferizaj")) {
-                    intent = new Intent(Cities.this, Ferizaj.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Ferizaj.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Fushe_Kosove")) {
-                    intent = new Intent(Cities.this, Fushe_Kosove.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Fushe_Kosove.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Gjakove")) {
-                    intent = new Intent(Cities.this, Gjakove.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Gjakove.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Gjilan")) {
-                    intent = new Intent(Cities.this, Gjilan.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Gjilan.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Kline")) {
-                    intent = new Intent(Cities.this, Kline.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Kline.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Malisheve")) {
-                    intent = new Intent(Cities.this, Malisheve.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Malisheve.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Mitrovice")) {
-                    intent = new Intent(Cities.this, Mitrovice.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Mitrovice.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Peje")) {
-                    intent = new Intent(Cities.this, Peje.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Peje.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Prishtine")) {
-                    intent = new Intent(Cities.this, Prishtine.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Prishtine.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Prizren")) {
-                    intent = new Intent(Cities.this, Prizren.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Prizren.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Rahovec")) {
-                    intent = new Intent(Cities.this, Rahovec.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Rahovec.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Skenderaj")) {
-                    intent = new Intent(Cities.this, Skenderaj.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Skenderaj.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Shtime")) {
-                    intent = new Intent(Cities.this, Shtime.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Shtime.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Therande")) {
-                    intent = new Intent(Cities.this, Therande.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Therande.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Viti")) {
-                    intent = new Intent(Cities.this, Viti.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Viti.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
                 else if(selection.equals("Vushtrri")) {
-                    intent = new Intent(Cities.this, Vushtrri.class);
-                    startActivity(intent);
+                    
+
+
+                    Cursor data = db.getMobileShopData();
+                    int mobileshopat = 0;
+                    if (data.moveToFirst()) {
+                        for (int i = 0; i < data.getCount(); i++) {
+                            if(data.getString(2).equals(selection)) {
+                                mobileshopat++;
+                            }
+                            data.moveToNext();
+                        }
+                    }
+                    if(mobileshopat > 0) {
+                        intent = new Intent(Cities.this, Vushtrri.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Nuk ka mobileshopa ne databaze per qytetin: "+selection,Toast.LENGTH_LONG).show();
+                    }
                 }
 
 

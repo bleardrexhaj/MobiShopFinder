@@ -47,10 +47,11 @@ public class FeedBack extends AppCompatActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //TODO FIX A BUG HERE !!!
-                           InputMethodManager imm = (InputMethodManager)
+
+                           /*InputMethodManager imm = (InputMethodManager)
                                 getSystemService(INPUT_METHOD_SERVICE);
-                           imm.hideSoftInputFromWindow(userInputDialogEditText.getWindowToken(),0);
+                                imm.hideSoftInputFromWindow(userInputDialogEditText.getWindowToken(),0);*/
+
                             String kritika_result = userInputDialogEditText.getText().toString();
                             String emri_result = emri.getText().toString();
                             String email_result = email.getText().toString();
