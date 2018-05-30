@@ -108,10 +108,10 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase DB) {
 
-            DB.execSQL(CREATE_TABLE_LOCATION);
-            DB.execSQL(CREATE_TABLE_PHONES);
-            DB.execSQL(CREATE_TABLE_USERS);
-            DB.execSQL(CREATE_TABLE_MOBILE_SHOP);
+        DB.execSQL(CREATE_TABLE_LOCATION);
+        DB.execSQL(CREATE_TABLE_PHONES);
+        DB.execSQL(CREATE_TABLE_USERS);
+        DB.execSQL(CREATE_TABLE_MOBILE_SHOP);
 
     }
 
@@ -199,11 +199,32 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     public Cursor getMobileShopData() {
-        Cursor cursor = this.getWritableDatabase().query(TABLE_MOBILESHOP, new String[]{MOBILESHOP_ID, MOBILESHOP_NAME, MOBILESHOP_QYTETI, MOBILESHOP_CONTACT_EMAIL,MOBILESHOP_ADDRESS}, null, null, null, null, null);
+        Cursor cursor = this.getWritableDatabase().query(TABLE_MOBILESHOP, new String[]{MOBILESHOP_ID, MOBILESHOP_NAME, MOBILESHOP_QYTETI, MOBILESHOP_CONTACT_EMAIL,MOBILESHOP_ADDRESS,MOBILESHOP_CONTACT_PHONE}, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor;
+    }
+    public String getMobileShopNumber(String name){
+        Cursor cursor = this.getWritableDatabase().rawQuery("Select "+MOBILESHOP_CONTACT_PHONE+" from "+TABLE_MOBILESHOP+" WHERE "+MOBILESHOP_NAME+"="+"'"+name+"'",null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor.getString(0);
+    }
+    public Cursor getMobileShopWithName(String name){
+        Cursor cursor = this.getWritableDatabase().rawQuery("Select * from "+TABLE_MOBILESHOP+" WHERE "+MOBILESHOP_NAME+"="+"'"+name+"'",null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
         return cursor;
     }
 
+    public String getUserById(int id) {
+        Cursor cursor = this.getWritableDatabase().rawQuery("Select "+ USERS_NAME +","+USERS_SURNAME+ " from "+ TABLE_USERS +" WHERE "+USERS_ID+"="+"'"+id+"'",null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor.getString(0);
+    }
 }

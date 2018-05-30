@@ -1,6 +1,7 @@
 package com.sj.projekt.mobishopfinder;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,10 +11,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class tabbed extends AppCompatActivity {
 
@@ -21,15 +22,21 @@ public class tabbed extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private String Emri;
     private double Latitude,Longitude;
-
+    private static String nr = "";
+    private DBHandler db;
     private ViewPager mViewPager;
 
-    public String nrTel = "049271704";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed);
+
+        Intent getIntent = getIntent();
+        Emri = getIntent.getStringExtra("Emri");
+        Latitude = getIntent.getDoubleExtra("Latitude",0);
+        Longitude = getIntent.getDoubleExtra("Longitude",0);
 
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -43,22 +50,27 @@ public class tabbed extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        //db
+        db = DBHandler.getInstance(getApplicationContext());
+        nr = db.getMobileShopNumber(Emri);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" + nrTel ));
-                startActivity(intent);
+
+                if(nr != null) {
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:" + nr));
+                    startActivity(intent);
+                }else
+                    Toast.makeText(getApplicationContext(),"Error", Toast.LENGTH_LONG).show();
             }
         });
 
 
 
-        Intent getIntent = getIntent();
-        Emri = getIntent.getStringExtra("Emri");
-        Latitude = getIntent.getDoubleExtra("Latitude",0);
-        Longitude = getIntent.getDoubleExtra("Longitude",0);
     }
 
 
@@ -96,22 +108,42 @@ public class tabbed extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                     Tab1Location tab1 = new  Tab1Location();
-                     Bundle args = new Bundle();
-                     Intent getIntent = getIntent();
+                    Tab1Location tab1 = new  Tab1Location();
+                    Bundle args = new Bundle();
 
-                     args.putString("Emri",Emri);
-                     args.putDouble("Latitude",Latitude);
-                     args.putDouble("Longitude",Longitude);
+                    args.putString("Emri",Emri);
+                    args.putDouble("Latitude",Latitude);
+                    args.putDouble("Longitude",Longitude);
 
-                     tab1.setArguments(args);
-                     return tab1;
+                    tab1.setArguments(args);
+                    return tab1;
                 case 1:
                     Tab2Phones tab2 = new Tab2Phones();
 
                     return tab2;
                 case 2:
                     Tab3Information tab3 = new Tab3Information();
+                    Bundle info = new Bundle();
+                    Cursor c = db.getMobileShopWithName(Emri);
+
+                    String qyteti = c.getString(3);
+                    String email = c.getString(4);
+
+
+                    int id = Integer.parseInt(c.getString(6));
+                    String Emri_i_pronarit = db.getUserById(id);
+
+
+
+                    info.putString("Emri_pronarit",Emri_i_pronarit);
+                    info.putString("Emri_Mobileshopit",Emri);
+                    info.putString("Numri_Mobileshopit",nr);
+                    info.putString("Qyteti",qyteti);
+                    info.putString("Email",email);
+
+                    tab3.setArguments(info);
+
+
                     return tab3;
                 default:
                     return null;
